@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cifrado AES Web</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Cifrado AES</h1>
+
+    <div class="options">
+      <button id="encryptBtn">Cifrar Mensaje</button>
+      <button id="decryptBtn">Descifrar Archivo</button>
+    </div>
+
+    <div id="encryptSection" class="hidden">
+      <h2>📝 Escribe tu mensaje</h2>
+      <textarea id="inputText" placeholder="Escribe el mensaje que deseas cifrar..."></textarea>
+      <input type="text" id="encryptionKey" placeholder="Clave (16, 24 o 32 caracteres)">
+      <button id="encryptAction">Cifrar y Descargar</button>
+    </div>
+
+    <div id="decryptSection" class="hidden">
+      <h2>📂 Subir archivo cifrado</h2>
+      <input type="file" id="fileInput">
+      <input type="text" id="decryptionKey" placeholder="Clave utilizada para cifrar">
+      <button id="decryptAction">Descifrar</button>
+      <textarea id="outputText" placeholder="Aquí se mostrará el mensaje descifrado..." readonly></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
